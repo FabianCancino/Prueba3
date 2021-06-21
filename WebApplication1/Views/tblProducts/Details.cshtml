@@ -1,0 +1,19 @@
+﻿@model WebApplication1.tblProduct
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblProduct</h4>
+    <hr />
+    <dl class="dl-horizontal">
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDProduct }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

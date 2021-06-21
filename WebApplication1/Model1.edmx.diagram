@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a9f7f7f68dae4fbd8dbc08a052d12815" Name="Diagram1">
+        <EntityTypeShape EntityType="CamboxModel.tblCustomer" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="CamboxModel.tblEmployee" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CamboxModel.tblOrder" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CamboxModel.tblProduct" Width="1.5" PointX="5.875" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="CamboxModel.FK_customer" ManuallyRouted="false" />
+        <AssociationConnector Association="CamboxModel.FK_employee" ManuallyRouted="false" />
+        <AssociationConnector Association="CamboxModel.FK_product" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

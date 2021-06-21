@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CamboxModelStoreContainer" CdmEntityContainer="CamboxEntities">
+    <EntitySetMapping Name="tblCustomer">
+      <EntityTypeMapping TypeName="CamboxModel.tblCustomer">
+        <MappingFragment StoreEntitySet="tblCustomer">
+          <ScalarProperty Name="Rut" ColumnName="Rut" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEmployee">
+      <EntityTypeMapping TypeName="CamboxModel.tblEmployee">
+        <MappingFragment StoreEntitySet="tblEmployee">
+          <ScalarProperty Name="IDEmployee" ColumnName="IDEmployee" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOrder">
+      <EntityTypeMapping TypeName="CamboxModel.tblOrder">
+        <MappingFragment StoreEntitySet="tblOrder">
+          <ScalarProperty Name="IDOrder" ColumnName="IDOrder" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProduct">
+      <EntityTypeMapping TypeName="CamboxModel.tblProduct">
+        <MappingFragment StoreEntitySet="tblProduct">
+          <ScalarProperty Name="IDProduct" ColumnName="IDProduct" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="FK_customer" TypeName="CamboxModel.FK_customer" StoreEntitySet="tblOrder">
+      <EndProperty Name="tblCustomer">
+        <ScalarProperty Name="Rut" ColumnName="Rut" />
+      </EndProperty>
+      <EndProperty Name="tblOrder">
+        <ScalarProperty Name="IDOrder" ColumnName="IDOrder" />
+      </EndProperty>
+      <Condition IsNull="false" ColumnName="Rut" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_employee" TypeName="CamboxModel.FK_employee" StoreEntitySet="tblOrder">
+      <EndProperty Name="tblEmployee">
+        <ScalarProperty Name="IDEmployee" ColumnName="IDEmployee" />
+      </EndProperty>
+      <EndProperty Name="tblOrder">
+        <ScalarProperty Name="IDOrder" ColumnName="IDOrder" />
+      </EndProperty>
+      <Condition IsNull="false" ColumnName="IDEmployee" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_product" TypeName="CamboxModel.FK_product" StoreEntitySet="tblOrder">
+      <EndProperty Name="tblProduct">
+        <ScalarProperty Name="IDProduct" ColumnName="IDProduct" />
+      </EndProperty>
+      <EndProperty Name="tblOrder">
+        <ScalarProperty Name="IDOrder" ColumnName="IDOrder" />
+      </EndProperty>
+      <Condition IsNull="false" ColumnName="IDProduct" />
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
